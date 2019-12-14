@@ -1,14 +1,12 @@
 <template>
   <v-container fluid>
-    <v-layout column>
-      <v-flex>
-        <h1>Vue.jsでテキトーに作ってみた</h1>
-      </v-flex>
+    <v-row justify="start" align="center">
+      <h1>Vue.jsでテキトーに作ってみた</h1>
+    </v-row>
 
-      <v-flex>
-        <profile />
-      </v-flex>
-    </v-layout>
+    <v-row justify="center" align="center">
+      <profile />
+    </v-row>
   </v-container>
 </template>
 
