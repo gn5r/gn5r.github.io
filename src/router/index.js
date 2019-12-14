@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import TopPage from "@/components/TopPage"
+import TopPage from "@/components/contents/TopPage"
 
 Vue.use(VueRouter)
 
