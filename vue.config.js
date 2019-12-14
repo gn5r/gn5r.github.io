@@ -5,5 +5,7 @@ module.exports = {
   devServer: {
     port: 80
   },
-  outputDir: 'docs/'
+  outputDir: 'docs/',
+  assetsDir: './',
+  publicPath: './'
 }
