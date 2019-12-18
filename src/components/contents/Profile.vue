@@ -4,7 +4,12 @@
       <v-container fluid class="pa-0">
         <v-row justify="center" align="center">
           <v-avatar size="128">
-            <v-img class="avatar" src="@/assets/img/gn5r.png" />
+            <v-img
+              class="avatar"
+              src="@/assets/img/gn5r.png"
+              alt="おれがぎんれいだ"
+              title="OGPキャッシュ消さないと、設定したのに反映されないんですけど"
+            />
           </v-avatar>
         </v-row>
 
