@@ -18,9 +18,8 @@
             <v-text-field label="名前" value="銀澪(ぎんれい)" readonly />
             <v-text-field label="bio" value="組込系Webプログラマ" readonly />
           </v-col>
-
           <v-col cols="12">
-            <v-text-field label="一言" value="GitHub Pagesの仕様がややこしい" readonly />
+            <v-text-field label="一言" value="mdi-github-boxが消えていた件について" readonly />
           </v-col>
         </v-row>
       </v-container>
@@ -29,7 +28,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data: () => ({})
+};
 </script>
 
 <style scoped>

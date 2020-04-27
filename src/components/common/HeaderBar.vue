@@ -33,7 +33,7 @@
     <v-tooltip bottom>
       <template v-slot:activator="{on}">
         <v-btn v-on="on" icon @click="openGitHub">
-          <v-icon>mdi-github-box</v-icon>
+          <v-icon>mdi-github</v-icon>
         </v-btn>
       </template>
       <span>GitHubを開く</span>
