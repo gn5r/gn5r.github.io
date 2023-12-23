@@ -1,0 +1,42 @@
+{
+  "categories": [
+    {
+      "title": "## 🚀 New Features",
+      "labels": ["feature", "feat"]
+    },
+    {
+      "title": "## 🐛 Bug Fixes",
+      "labels": ["fix", "bug"]
+    },
+    {
+      "title": "## 🧪 Tests",
+      "labels": ["test"]
+    },
+    {
+      "title": "## 💬 Other",
+      "labels": ["other"]
+    },
+    {
+      "title": "## 📦 Dependencies",
+      "labels": ["dependencies"]
+    },
+    {
+      "title": "## 💥 Braking Changes",
+      "labels": ["breaking change"]
+    },
+    {
+      "title": "## ♻️ Code Refactoring",
+      "labels": ["refactor"]
+    },
+    {
+      "title": "## 📝 Documentation",
+      "labels": ["docs", "documentation"]
+    },
+    {
+      "title": "## 🗑️ Deprecated",
+      "labels": ["deprecated"]
+    }
+  ],
+  "pr_template": "- ${{TITLE}} (#${{NUMBER}})",
+  "ignore_labels": ["ignore"]
+}
