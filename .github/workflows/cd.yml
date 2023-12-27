@@ -2,8 +2,8 @@ name: CD
 
 on:
   push:
-    tags:
-      - "v*"
+    branches:
+      - "main"
     paths-ignore:
       - ".github/**"
       - "**/README*"
@@ -19,7 +19,7 @@ jobs:
   deploy-docs:
     needs: [ci]
     runs-on: ubuntu-latest
-    if: startswith(github.ref, 'refs/tags/v')
+    if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout
         uses: actions/checkout@v3
@@ -47,34 +47,3 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
-
-  create-release:
-    needs: [ci]
-    runs-on: ubuntu-latest
-    if: startswith(github.ref, 'refs/tags/v')
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - run: echo "TAG_NAME=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
-      - name: Build Release Note
-        id: github_release
-        uses: mikepenz/release-changelog-builder-action@v4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          configuration: ".github/workflows/templates/configuration.json"
-
-      - name: Create release tag
-        id: create_release
-        uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ env.TAG_NAME }}
-          body: ${{steps.github_release.outputs.changelog}}
